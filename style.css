@@ -1,0 +1,202 @@
+
+/*Animation settings*/
+
+.flip3d {
+	min-width:100%;
+	height: 397px;
+	float: left;
+
+}
+
+.flip3d > .box1 {
+	position: relative;
+	-webkit-transform: perspective( 300px ) rotateY( 0deg);
+	transform: perspective( 300px ) rotateY( 0deg);
+	background-image: url(http://www.tshirtandsons.co/images/products/preview/mens%20light%20blue%20t%20shirt.png);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+.flip3d > .boxback {
+	position: relative;
+	-webkit-transform: perspective( 300px ) rotateY( 180deg);
+	transform: perspective( 300px ) rotateY( 180deg);
+	background-image: url(http://www.tshirtandsons.co/images/products/preview/womens%20ht%20pink%20organic%20t%20shirt.png);
+	background-size: 100%;
+	top: -400px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d:hover > .box1{
+	-webkit-transform: perspective( 300px ) rotateY( -180deg);
+	transform: perspective( 300px ) rotateY( -180deg);
+}
+
+.flip3d:hover > .boxback{
+	-webkit-transform: perspective( 300px ) rotateY( 0deg);
+	transform: perspective( 300px ) rotateY( 0deg);
+}
+
+.moveup3d {
+	min-width: 40px;
+	height:40px;
+	float: left;
+}
+
+.moveup3d > .box5 {
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: perspective (0px) translateY (0px);
+	transition: transform .5s linear 0s;
+}
+
+.moveup3d > .colorp {
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-image: url(http://www.sollewittprints.org/stuff/contentmgr/files/1/f44323ecb4e7c93461d2a9822b9b8f1a/image/lewitt_e_37_fullset__800_.jpg);
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-transform: perspective (200px) translateY (50px);
+	transform: perspective (200px) translateY (50px);
+	transition: transform .5s linear 0s;
+}
+
+.moveup3d:hover >.box5 {
+	-webkit-transform: perspective( 200px ) translateY( -50px);
+	transform: perspective( 200px ) translateY( -50px);
+}
+
+.moveup3d:hover >.colorp {
+	-webkit-transform: perspective( 200px ) translateY( 0px);
+	transform: perspective( 200px ) translateY( 0px);
+}
+/*Test Styles to show boxes*/
+.box{
+	color:white;
+	font-size: 100px;
+	text-align: center;
+	text-shadow: 4px 4px 0 rgb(0,0,0,0.1);
+}
+
+.box p {
+	font-size: 20px;
+}
+
+
+/*Color of lower boxes*/
+.colorp {background-color: orange; height:40px; width:40px;}
+.box1 { background-color: white;}
+.box2 { height: 60px; background-color: white;}
+.box3 { height: 60px;background-color: white;}
+.box4 { height: 60px;background-color: white;}
+.box5 { height: 60px;background-color: white;}
+.box6 { height: 60px;background-color: white;}
+
+/*Flexbox properties*/
+.wrapper {
+	display: flex;
+	flex-direction:row;
+	min-width: 25%;
+	height: 500px;
+	border:5px solid rgb(83,140,193);
+	margin: 0 auto;
+	float: left;
+	padding: 25px;
+	flex-wrap: wrap;
+	margin-left: 30px;
+
+}
+
+.box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
+		background-color: rgb(83,140,193);
+
+	}
+
+.box {
+	flex: 1;
+	min-width: 19%;
+	min-height: 15px;
+	border: 1.9px solid rgb(83,140,193);
+}
+
+
+.box1:nth-child(1) {
+	min-width: 100%;
+	height:397px;
+	background-image: url(http://www.tshirtandsons.co/images/products/preview/mens%20light%20blue%20t%20shirt.png);
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.boxback {
+	min-width: 100%;
+	height:397px;
+	background-image: url(http://www.tshirtandsons.co/images/products/preview/mens%20light%20blue%20t%20shirt.png);
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.box2 {
+	background-image: url(https://cdn1.iconfinder.com/data/icons/windows-8-metro-style/256/refresh.png);
+	background-size: 61px;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+
+.box3 {
+	background-image: url(http://icons.iconarchive.com/icons/icons8/ios7/128/Gaming-Hearts-icon.png);
+	background-size: 61px;
+	background-position: center center;
+}
+
+.box4 {
+	font-size: 30px;
+	color: black;
+	text-align: center;
+}
+
+
+.box5 {
+	background-image: url(http://www.enterprise-dashboard.com/img/bullet_square_red.png);
+	background-size: 61px;
+	background-position: center center;
+}
+	
+
+.box6 {
+	background-image: url(http://b.dryicons.com/images/icon_sets/symbolize_icons_set/png/64x64/shopping_cart.png);
+	background-size: 61px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+/*Right-side box*/
+
+.cornerbox:hover {
+	background-color: rgb(83,140,193);
+}
+
+.cornerbox {
+	position: relative;
+	left: 87.3%;
+	bottom: 91.91%;
+	min-width: 12%;
+	min-height: 40px;
+	background-color: white;
+	border: 1px;
+	border-style: solid;
+	border-color: rgb(83,140,193);
+	background-image: url(https://sellanapp.com/how_works/images/rotate.png);
+	background-size: 40px;
+}
